@@ -17,8 +17,8 @@
     </script>
 
     <p>Testing Event Handling:</p>
-    <button onclick="this.innerHTML = Date()">Click to display date</button><br><br>
-    <button onmouseover="windowAlert('This is a mouseover alert')">Mouseover window.alert()</button>
+    <button onmouseover="this.innerHTML = Date()">Mouseover to display date</button><br><br>
+    <button onclick="windowAlert('ALERT')">CLICK ME</button>
     
     <!--
     Common HTML Event Attributes
@@ -48,8 +48,17 @@
     <p>Testing Foreach Method (callback on each element in array):</p>
     <p id="testForEach"></p>
     <script>
-    const myArr = [1, 2, 3, 4, 5];
-    testForEach(myArr, 'testForEach');
+      const myNumArr = [1, 2, 3, 4, 5];
+      testForEach(myNumArr, 'testForEach');
+    </script>
+    <p>Testing Map Method (callback on each element in array):</p>
+    <p id="testMap"></p>
+    <script>
+      const myStringArr = ['This', 'array', 'has', 'been', 'mapped'];
+      testMapFunction(myStringArr, 'testMap');
+      testSets();
+      console.log('Testing Maps');
+      testMap();
     </script>
    </body>
 </html>

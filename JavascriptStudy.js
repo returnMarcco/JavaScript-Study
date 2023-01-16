@@ -1,6 +1,11 @@
 // JavaScript Study
 // Started: 29/12/2022
 
+/* Note - This module has been written
+** to work in conjunction with
+** test_js_with_html.html
+*/
+
 // Output
 // ----------------
 const PI = 3.14;
@@ -126,10 +131,73 @@ function testForEach(array, id) {
             output += element;
             writeToEle(id, output); 
         }
-    });
+    })
 }
 
 // Map Function - Used to call a function on each element in an array. Creates new array.
-function testMap(id, array, callback) {
-
+function testMapFunction(array, id) {
+    let counter = '';
+    let output = '';
+    
+    array.map(function(element) {
+        if (counter < array.length - 1) { 
+            output += element + ' ';
+            writeToEle(id, output);
+            counter++;
+        }
+        
+        else {
+            output += element;
+            writeToEle(id, output); 
+        }
+    })
 }
+
+// Sets are collections of unique values
+function testSets() {
+    const numArr = [1, 2, 3, 4, 5];
+    const numSet = new Set(numArr);
+
+    numSet.forEach(function(element) {
+        console.log(element);
+    })
+    
+    console.log('Adding elements to set');
+    numSet.add(6);
+    numSet.add(7);
+    numSet.add(8);
+
+    numSet.forEach(function(element) {
+        console.log(element);
+    })
+
+    console.log('Returning iterator object from set');
+    for (let element of numSet.values()) {
+        console.log(element += element);
+    }
+}
+
+// Maps are collections of key-value pairs. Maps preserve order of keys
+// Keys can be of any data type
+function testMap() {
+    mapKeys = '';
+    const personMap = new Map([
+        ['name', 'trevor'],
+        ['age', 30]
+    ]);
+
+    console.log('Map Size: ' + personMap.size);
+    personMap.set('Address', '33 Mason Way');
+    console.log('Map Size: ' + personMap.size);
+    
+    personMap.forEach(function(value, key) {
+        mapKeys += key + ': ' + value + '\n';
+    })
+
+    console.log(mapKeys);
+}
+
+function main() {
+    testMap();
+}
+
