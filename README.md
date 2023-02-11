@@ -1,2 +1,2 @@
 # JavaScript-Unit-Testing
-Study JS
+As the title suggests..
