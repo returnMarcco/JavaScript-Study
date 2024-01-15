@@ -1,2 +1,2 @@
-# JavaScript-Unit-Testing
+# JavaScript-Study
 As the title suggests..
